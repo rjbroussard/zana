@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  zana-bot:
+    image: zana-bot:latest
+    build: .
+    volumes:
+      - .:/app
+    restart: unless-stopped
