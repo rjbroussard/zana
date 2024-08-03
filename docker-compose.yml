@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   zana-bot:
     image: zana-bot:latest
