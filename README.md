@@ -1,7 +1,7 @@
 # zana
 docker compose -f "docker-compose.yml" up -d --build 
 
-THIS REQUIRS A FILE CALLED CONFIG IN THE ROOT DIR WITH A TOKEN IN THE FORMAT ::
+THIS REQUIRS A FILE CALLED "config.json" IN THE ROOT DIR WITH A TOKEN IN THE FORMAT ::
 
 {
     "token": "token.tokenything"
