@@ -4,7 +4,7 @@ docker compose -f "docker-compose.yml" up -d --build
 THIS REQUIRS A FILE CALLED "config.json" IN THE ROOT DIR WITH A TOKEN IN THE FORMAT ::
 
 {
-    "token": "token.tokenything"
+    "token": "REPLACEMEWITHYOURTOKEN"
 }
 
 you can generate one by cretaing a new application on you discord developer page 
