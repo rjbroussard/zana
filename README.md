@@ -13,4 +13,4 @@ https://discord.com/developers/applications/
 
 you can create a new app and generate a new token for a bot
 
-  - <img src="https://github.com/rjbroussard/zana/master/gifs/Token.png?raw=true" width=60%/>
+  - <img src="https://github.com/rjbroussard/zana/blob/master/gifs/Token.png?raw=true" width=60%/>
