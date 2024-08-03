@@ -1,7 +1,10 @@
 aiohttp
 cachetools
-discord.py
+discord.py==1.7.3
 nltk
 numpy
 Pillow
-PoE.py
+PoE.py @ git+https://github.com/xKynn/PoE.py.git@master
+urllib3
+bs4
+requests
