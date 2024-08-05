@@ -48,7 +48,10 @@ class Zana(commands.AutoShardedBot):
         self.server_config = ServerConfig('server_config.json')
 
     def run(self):
-        super().run(self.config['token'] or self.DOCKER_TOKEN)
+        if self.config['token']:
+            super().run(self.config['token'])
+        else:
+            super().run(self.DOCKER_TOKEN)
 
     async def report(self, ctx):
         embed = Embed(description="⚠ Zana encountered an error while processing your request. If you would like to send"
