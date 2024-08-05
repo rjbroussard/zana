@@ -1,5 +1,6 @@
 services:
   zana-bot:
+    pull_policy: build
     image: zana-bot:latest
     build: .
     volumes:
