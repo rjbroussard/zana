@@ -48,7 +48,7 @@ class Zana(commands.AutoShardedBot):
         self.server_config = ServerConfig('server_config.json')
 
     def run(self):
-        if self.config and self.config['token']:
+        if hasattr(self, 'config') and 'token' in self.config and self.config['token']:
             super().run(self.config['token'])
         else:
             super().run(self.DOCKER_TOKEN)
