@@ -9,6 +9,8 @@ from utils.custom_context import ZanaContext
 from utils.server_config import ServerConfig
 from poe.exceptions import OutdatedPoBException
 from poe.exceptions import AbsentItemBaseException
+import os
+import os.path
 
 
 class Zana(commands.AutoShardedBot):
@@ -16,8 +18,12 @@ class Zana(commands.AutoShardedBot):
         self.description = 'To be continued'
 
         # Configs & token
-        with open('config.json') as file:
-            self.config = json.load(file)
+        if 'DOCKER_TOKEN' in os.environ:
+            self.DOCKER_TOKEN = os.environ['DOCKER_TOKEN']
+        if os.path.isfile('config.json'):
+            with open('config.json') as file:
+                self.config = json.load(file)
+
 
 
         # TODO:
@@ -42,7 +48,7 @@ class Zana(commands.AutoShardedBot):
         self.server_config = ServerConfig('server_config.json')
 
     def run(self):
-        super().run(self.config['token'])
+        super().run(self.config['token'] or self.DOCKER_TOKEN)
 
     async def report(self, ctx):
         embed = Embed(description="⚠ Zana encountered an error while processing your request. If you would like to send"
