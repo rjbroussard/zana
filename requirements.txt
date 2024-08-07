@@ -4,7 +4,7 @@ discord.py==1.7.3
 nltk
 numpy
 Pillow
-PoE.py @ git+https://github.com/xKynn/PoE.py.git@master
+PoE.py @ git+https://github.com/rjbroussard/PoE.py.git
 urllib3
 bs4
 requests
